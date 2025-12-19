@@ -70,6 +70,16 @@ def payment():
         return "Access Denied"
     return "<h2>Payment Service (Admin Only)</h2>"
 
+
+@app.route("/dashboardd")
+@token_required
+def dashboard():
+    return render_template(
+        "dashboardd.html",
+        role=request.user["role"],
+        username=request.user["username"]
+    )
+
 @app.route("/logout")
 def logout():
     session.clear()
