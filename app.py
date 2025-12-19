@@ -4,7 +4,7 @@ import datetime
 from functools import wraps
 
 app = Flask(__name__)
-app.secret_key = "pwq345tfbnmgr456789kmvcxq234"
+app.secret_key = "9876543211111"
 JWT_SECRET = "jwtsecret123"
 
 # here i'm using force data for login
