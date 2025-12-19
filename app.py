@@ -71,15 +71,6 @@ def payment():
     return "<h2>Payment Service (Admin Only)</h2>"
 
 
-@app.route("/dashboardd")
-@token_required
-def dashboard():
-    return render_template(
-        "dashboardd.html",
-        role=request.user["role"],
-        username=request.user["username"]
-    )
-
 @app.route("/logout")
 def logout():
     session.clear()
@@ -89,5 +80,3 @@ def logout():
 if __name__ == "__main__":
     app.run(debug=True)
     
-#this is app.py file which is flask based web application with jwt authentication and role based access control
-#username and email is changed 
