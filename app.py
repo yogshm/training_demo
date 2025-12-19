@@ -85,6 +85,11 @@ def logout():
     session.clear()
     return redirect(url_for("index"))
 
+@app.route("/logoutt") #adding this just to check the changes i made so far 
+def logout():
+    session.clear()
+    return redirect(url_for("index"))
+
 # main funtion
 if __name__ == "__main__":
     app.run(debug=True)
